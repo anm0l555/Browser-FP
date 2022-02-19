@@ -11,7 +11,9 @@ As depicted by our project title, our ultimate aim will be to increase the confi
 4) Making an ML bot that detects which fingerprinting methods a particular browser is using and which all is missing. Then, notifying how to fix the missing one after implementing some more features to the fingerprinting process already implemented in that browser, thus increasing the confidence score.
 
 Useful Blogs:
-https://fingerprintjs.com/blog/what-is-browser-fingerprinting/ 
-https://fingerprintjs.com/blog/browser-fingerprinting-techniques/
-https://fingerprintjs.com/blog/browser-fingerprinting-privacy/
-https://digiday.com/media/googles-opaque-practices-to-restrict-fingerprinting-create-confusion-among-its-ad-tech-partners/
+<ul>
+<li>https://fingerprintjs.com/blog/what-is-browser-fingerprinting/ </li>
+<li>https://fingerprintjs.com/blog/browser-fingerprinting-techniques/</li>
+<li>https://fingerprintjs.com/blog/browser-fingerprinting-privacy/</li>
+<li>https://digiday.com/media/googles-opaque-practices-to-restrict-fingerprinting-create-confusion-among-its-ad-tech-partners/</li>
+</ul>

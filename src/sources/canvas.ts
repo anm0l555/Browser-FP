@@ -42,6 +42,7 @@ function doesSupportWinding(context: CanvasRenderingContext2D) {
     // https://github.com/Modernizr/Modernizr/blob/master/feature-detects/canvas/winding.js
     context.rect(0, 0, 10, 10)
     context.rect(2, 2, 6, 6)
+    //  TODO: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath
     return !context.isPointInPath(5, 5, 'evenodd')
 }
 

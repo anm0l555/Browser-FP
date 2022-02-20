@@ -1,8 +1,4 @@
-export interface CanvasFingerprint {
-    winding: boolean
-    geometry: string
-    text: string
-}
+import {CanvasFingerprint} from '../types'
 
 // https://www.browserleaks.com/canvas#how-does-it-work
 export default function getCanvasFingerprint(): CanvasFingerprint {

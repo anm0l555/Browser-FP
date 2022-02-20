@@ -3,3 +3,7 @@ export interface CanvasFingerprint {
     geometry: string
     text: string
 }
+
+export interface IFingerprint {
+    canvas: any
+}

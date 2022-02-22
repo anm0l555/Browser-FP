@@ -192,7 +192,7 @@ export function isIPad(): boolean {
   return (
     countTruthy([
       'MediaSource' in window, // Since iOS 13
-      !!Element.prototype.webkitRequestFullscreen, // Since iOS 12
+      !!Element.prototype.requestFullscreen, // Since iOS 12
       // iPhone 4S that runs iOS 9 matches this. But it won't match the criteria above, so it won't be detected as iPad.
       screenRatio > 0.65 && screenRatio < 1.53,
     ]) >= 2
@@ -203,16 +203,16 @@ export function isIPad(): boolean {
  * Warning for package users:
  * This function is out of Semantic Versioning, i.e. can change unexpectedly. Usage is at your own risk.
  */
-export function getFullscreenElement(): Element | null {
-  const d = document
-  return d.fullscreenElement || d.msFullscreenElement || d.mozFullScreenElement || d.webkitFullscreenElement || null
-}
+// export function getFullscreenElement(): Element | null {
+//   const d = document
+//   return d.fullscreenElement || d.msFullscreenElement || d.mozFullScreenElement || d.webkitFullscreenElement || null
+// }
 
-export function exitFullscreen(): Promise<void> {
-  const d = document
-  // `call` is required because the function throws an error without a proper "this" context
-  return (d.exitFullscreen || d.msExitFullscreen || d.mozCancelFullScreen || d.webkitExitFullscreen).call(d)
-}
+// export function exitFullscreen(): Promise<void> {
+//   const d = document
+//   // `call` is required because the function throws an error without a proper "this" context
+//   return (d.exitFullscreen || d.msExitFullscreen || d.mozCancelFullScreen || d.webkitExitFullscreen).call(d)
+// }
 
 /**
  * Checks whether the device runs on Android without using user-agent.

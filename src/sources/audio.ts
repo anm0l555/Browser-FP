@@ -20,7 +20,7 @@ const enum InnerErrorName {
  */
 export default function getAudioFingerprint(): number | (() => Promise<number>) {
   const w = window
-  const AudioContext = w.OfflineAudioContext || w.webkitOfflineAudioContext
+  const AudioContext = w.OfflineAudioContext || w.AudioContext
   if (!AudioContext) {
     return SpecialFingerprint.NotSupported
   }
@@ -54,8 +54,8 @@ export default function getAudioFingerprint(): number | (() => Promise<number>) 
 
   const [renderPromise, finishRendering] = startRenderingAudio(context)
   const fingerprintPromise = renderPromise.then(
-    (buffer) => getHash(buffer.getChannelData(0).subarray(hashFromIndex)),
-    (error) => {
+    (buffer:any) => getHash(buffer.getChannelData(0).subarray(hashFromIndex)),
+    (error:any) => {
       if (error.name === InnerErrorName.Timeout || error.name === InnerErrorName.Suspended) {
         return SpecialFingerprint.Timeout
       }
@@ -90,7 +90,7 @@ function startRenderingAudio(context: OfflineAudioContext) {
   const runningSufficientTime = 5000
   let finalize = () => undefined as void
 
-  const resultPromise = new Promise<AudioBuffer>((resolve, reject) => {
+  const resultPromise =  new Promise<AudioBuffer>((resolve:any, reject:any) => {
     let isFinalized = false
     let renderTryCount = 0
     let startedRunningAt = 0

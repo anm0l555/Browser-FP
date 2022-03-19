@@ -6,4 +6,5 @@ export interface CanvasFingerprint {
 
 export interface IFingerprint {
     canvas: any
+    audio: number | (() => Promise<number>)
 }

@@ -9,7 +9,7 @@ export default function getCanvasFingerprint(): CanvasFingerprint {
 
     return {
         winding: doesSupportWinding(context),
-        geometry: makeGeometryImage(canvas, context),
+        geometry: makeGeometryImage(canvas,  context),
         // Text is unstable:
         // https://github.com/fingerprintjs/fingerprintjs/issues/583
         // TODO: https://github.com/fingerprintjs/fingerprintjs/issues/103

@@ -1,6 +1,6 @@
 import { version } from '../package.json'
 import { requestIdleCallbackIfAvailable } from './utils/async'
-import { UnknownComponents } from './utils/entropy_source'
+import { UnknownComponents } from './utils/entropy_source.ts'
 import { x64hash128 } from './utils/hashing'
 import { errorToObject } from './utils/misc'
 import loadBuiltinSources, { BuiltinComponents } from './sources'

@@ -1,7 +1,7 @@
 import { IFingerprint } from '../types'
 import getAudioFingerprint from './audio'
 import getCanvasFingerprint from './canvas'
-
+import { loadSources, SourcesToComponents } from '../utils/entropy_source'
 
 
 export const sources: IFingerprint = {

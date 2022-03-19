@@ -6,6 +6,12 @@ import { errorToObject } from './utils/misc'
 import loadBuiltinSources, { BuiltinComponents } from './sources'
 import getConfidence, { Confidence } from './confidence'
 
+declare global {
+  interface Window {
+    __fpjs_d_m:any;
+  }
+}
+
 /**
  * Options for Fingerprint class loading
  */

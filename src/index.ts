@@ -1,7 +1,7 @@
 import { load, Agent, LoadOptions, GetOptions, GetResult, hashComponents, componentsToDebugString } from './agent'
 import { BuiltinComponents } from './sources'
 import { Confidence } from './confidence'
-import { Component, UnknownComponents } from './utils/entropy_source.ts'
+import { Component, UnknownComponents } from './utils/entropy_source'
 import { x64hash128 } from './utils/hashing'
 
 // Exports that are under Semantic versioning
@@ -38,4 +38,4 @@ export {
   isGecko,
   isDesktopSafari,
 } from './utils/browser'
-export { loadSources, SourcesToComponents } from './utils/entropy_source.ts'
+export { loadSources, SourcesToComponents } from './utils/entropy_source'

@@ -1,4 +1,4 @@
-import {CanvasFingerprint} from '../types'
+import { CanvasFingerprint } from '../types'
 
 // https://www.browserleaks.com/canvas#how-does-it-work
 export default function getCanvasFingerprint(): CanvasFingerprint {
@@ -12,7 +12,7 @@ export default function getCanvasFingerprint(): CanvasFingerprint {
         geometry: makeGeometryImage(canvas, context),
         // Text is unstable:
         // https://github.com/fingerprintjs/fingerprintjs/issues/583
-        // https://github.com/fingerprintjs/fingerprintjs/issues/103
+        // TODO: https://github.com/fingerprintjs/fingerprintjs/issues/103
         // Therefore it's extracted into a separate image.
         text: makeTextImage(canvas, context),
     }
@@ -41,7 +41,7 @@ function doesSupportWinding(context: CanvasRenderingContext2D) {
     //  TODO: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath
     return !context.isPointInPath(5, 5, 'evenodd')
 }
-
+// changes 
 function makeTextImage(canvas: HTMLCanvasElement, context: CanvasRenderingContext2D) {
     // Resizing the canvas cleans it
     canvas.width = 240
@@ -69,7 +69,7 @@ function makeTextImage(canvas: HTMLCanvasElement, context: CanvasRenderingContex
 
     return save(canvas)
 }
-
+// chnages 
 function makeGeometryImage(canvas: HTMLCanvasElement, context: CanvasRenderingContext2D) {
     // Resizing the canvas cleans it
     canvas.width = 122

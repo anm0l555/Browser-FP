@@ -1,7 +1,7 @@
-import { CanvasFingerprint } from '../types'
+// import { CanvasFingerprint } from '../types'
 
 // https://www.browserleaks.com/canvas#how-does-it-work
-export default function getCanvasFingerprint(): CanvasFingerprint {
+export default function getCanvasFingerprint() {
     const [canvas, context] = makeCanvasContext()
     if (!isSupported(canvas, context)) {
         return { winding: false, geometry: '', text: '' }

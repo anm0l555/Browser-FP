@@ -20,10 +20,10 @@ Useful Blogs:
 
 
 
-https://cdn.jsdelivr.net/npm/browser-fp@1.0.0/dist/src/index.js
+https://cdn.jsdelivr.net/npm/browser-fp@1.0.1/dist/src/index.js
 
   // Initialize the agent at application startup.
-  const fpPromise = import('https://cdn.jsdelivr.net/npm/browser-fp@1.0.0/dist/src/index.js')
+  const fpPromise = import('https://cdn.jsdelivr.net/npm/browser-fp@1.0.1/dist/src/index.js')
     .then(FingerprintJS => FingerprintJS.load())
 
   // Get the visitor identifier when you need it.
@@ -33,4 +33,4 @@ https://cdn.jsdelivr.net/npm/browser-fp@1.0.0/dist/src/index.js
       // This is the visitor identifier:
       const visitorId = result.visitorId
       console.log(visitorId)
-    })
+    })  

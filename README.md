@@ -17,3 +17,7 @@ Useful Blogs:
 <li>https://fingerprintjs.com/blog/browser-fingerprinting-privacy/</li>
 <li>https://digiday.com/media/googles-opaque-practices-to-restrict-fingerprinting-create-confusion-among-its-ad-tech-partners/</li>
 </ul>
+
+
+
+https://cdn.jsdelivr.net/gh/anm0l555/Browser-FP@0.0.1/dist/src/index.js

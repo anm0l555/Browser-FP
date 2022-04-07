@@ -1,7 +1,7 @@
 import { load, Agent, LoadOptions, GetOptions, GetResult, hashComponents, componentsToDebugString } from './agent'
 import { BuiltinComponents } from './sources'
 import { Confidence } from './confidence'
-import { Component, UnknownComponents } from './utils/entropy_source.ts'
+import { Component, UnknownComponents } from './utils/entropy_source'
 import { x64hash128 } from './utils/hashing'
 
 // Exports that are under Semantic versioning
@@ -27,9 +27,9 @@ export default { load, hashComponents, componentsToDebugString }
 export const murmurX64Hash128 = x64hash128
 export { prepareForSources } from './agent'
 export { sources } from './sources'
-export { getScreenFrame } from './sources/screen_frame'
+// export { getScreenFrame } from './sources/screen_frame'
 export {
-  getFullscreenElement,
+  // getFullscreenElement,
   isAndroid,
   isTrident,
   isEdgeHTML,
@@ -38,4 +38,4 @@ export {
   isGecko,
   isDesktopSafari,
 } from './utils/browser'
-export { loadSources, SourcesToComponents } from './utils/entropy_source.ts'
+export { loadSources, SourcesToComponents } from './utils/entropy_source'

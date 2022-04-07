@@ -203,16 +203,16 @@ export function isIPad(): boolean {
  * Warning for package users:
  * This function is out of Semantic Versioning, i.e. can change unexpectedly. Usage is at your own risk.
  */
-// export function getFullscreenElement(): Element | null {
-//   const d = document
-//   return d.fullscreenElement || d.msFullscreenElement || d.mozFullScreenElement || d.webkitFullscreenElement || null
-// }
+export function getFullscreenElement(): Element | null {
+  const d = document
+  return d.fullscreenElement || null //d.fullscreenElement || d.mozFullScreenElement || d.webkitFullscreenElement ||---- removed 
+}
 
-// export function exitFullscreen(): Promise<void> {
-//   const d = document
-//   // `call` is required because the function throws an error without a proper "this" context
-//   return (d.exitFullscreen || d.msExitFullscreen || d.mozCancelFullScreen || d.webkitExitFullscreen).call(d)
-// }
+export function exitFullscreen(): Promise<void> {
+  const d = document
+  // `call` is required because the function throws an error without a proper "this" context
+  return (d.exitFullscreen ).call(d) //|| d.msExitFullscreen || d.mozCancelFullScreen || d.webkitExitFullscreen
+}
 
 /**
  * Checks whether the device runs on Android without using user-agent.

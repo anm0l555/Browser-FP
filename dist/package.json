@@ -1,6 +1,6 @@
 {
     "name": "browser-fp",
-    "version": "1.0.1",
+    "version": "1.0.21",
     "description": "Project Title: Increasing Confidence Score of Browser Fingerprinting",
     "main": "index.js",
     "keywords": [

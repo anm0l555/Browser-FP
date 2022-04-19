@@ -1,6 +1,6 @@
 {
     "name": "browser-fp",
-    "version": "1.0.21",
+    "version": "1.0.22",
     "description": "Project Title: Increasing Confidence Score of Browser Fingerprinting",
     "main": "index.js",
     "keywords": [
@@ -42,6 +42,10 @@
         "commonjs": "^0.0.1",
         "tslib": "^2.0.1"
     },
+    "files": [
+        "dist/src/*.js",
+        "dist/src/**/*.js"
+    ],
     "devDependencies": {
         "@rollup/plugin-json": "^4.1.0",
         "@rollup/plugin-node-resolve": "^9.0.0",

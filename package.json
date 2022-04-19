@@ -43,8 +43,8 @@
     "tslib": "^2.0.1"
   },
   "files": [
-    "dist/*.js",
-    "dist/**/*.js"
+    "dist/src/*.js",
+    "dist/src/**/*.js"
   ],
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
